@@ -6,14 +6,13 @@ import (
 	"strings"
 )
 
-func ReadInput(path string) (string, error) {
-	b, err := os.ReadFile(path)
-	return string(b), err
+func ReadInput(path string) string {
+	b, _ := os.ReadFile(path)
+	return strings.TrimSpace(string(b))
 }
 
 func ReadLines(path string) []string {
-	input, err := ReadInput(path)
-	CheckErr(err)
+	input := ReadInput(path)
 	return strings.Split(strings.TrimSpace(input), "\n")
 }
 

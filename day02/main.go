@@ -21,7 +21,7 @@ func main() {
 
 func part1() {
 	res := 0
-	input, _ := utils.ReadInput("./input.txt")
+	input := utils.ReadInput("./input.txt")
 	ranges := getRanges(input)
 	for _, r := range ranges {
 		for i := r.start; i <= r.end; i++ {
@@ -42,7 +42,7 @@ func part1() {
 
 func part2() {
 	res := 0
-	input, _ := utils.ReadInput("./input.txt")
+	input := utils.ReadInput("./input.txt")
 	ranges := getRanges(input)
 	for _, r := range ranges {
 		for i := r.start; i <= r.end; i++ {
